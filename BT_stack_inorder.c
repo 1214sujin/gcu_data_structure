@@ -10,7 +10,7 @@ typedef struct treeNode {
 
 typedef struct stackNode {
 	tn* data;
-	struct sn* link;
+	struct stackNode* link;
 } sn;
 sn* top;
 
@@ -67,7 +67,7 @@ int main() {
 	tn* n2 = makeRootNode(4, n4, NULL);
 	tn* n1 = makeRootNode(15, n2, n3);
 
-	printf("중위 순회 = ");
+	printf("inorder = ");
 	inorder(n1);
 
 	return 0;
